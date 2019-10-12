@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="areas_de_trabajo">
+        <item>indica el area de trabajo</item>
+        <item>ventas_1</item>
+        <item>licitaciones</item>
+        <item>cotizaciones</item>
+        <item>compras</item>
+        <item>registro</item>
+        <item>desarrollo</item>
+        <item>diseño</item>
+        <item>prensas</item>
+        <item>informacion variable</item>
+        <item>contabilidad</item>
+        <item>almacen</item>
+        <item>colectoras</item>
+        <item>gerencia</item>
+        <item>intendencia</item>
+        <item>seguridad</item>
+        <item>recursos humanos</item>
+        <item>rinvitado</item>
+    </string-array>
+</resources>

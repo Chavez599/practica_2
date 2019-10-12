@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Splash</string>
+<string name="terminos">Como parte fundamental de nuestro desarrollo y para la satisfacción total de nuestros clientes; contamos con Sistemas de Gestión de Seguridad de la Información, Sistema de Gestión de Seguridad de la Impresión y Sistemas de Gestión de Calidad, aplicando estos para nuestra empresa con mejoras constantes y garantizando así que en cada fase de producción se pueda comprobar la integridad de los documentos impresos, los cuales son inspeccionados en todos sus procesos y avalados con estrictos controles. Como resultado podemos ofrecer los más altos estándares de calidad, servicio y tiempos de entrega para nuestros productos.
+
+
+
+Formas Inteligentes Planta Monterrey, empresa certificada en ISO/IEC  27001  |  ISO 14298  |  ISO 9001  con carácter internacional.
+
+
+
+Garantiza los más altos estándares de seguridad a nuestros clientes.
+
+Establece la confiabilidad de nuestros clientes a nivel nacional e internacional al comprobar la competitividad con los mejores, dentro de la globalización en las de soluciones integrales de seguridad.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

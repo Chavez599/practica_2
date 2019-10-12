@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorFondo"
+    tools:context=".home">
+ <include layout="@layout/app_bar"/>
+ <TextView
+     android:layout_marginTop="20dp"
+     android:id="@+id/tvbienvenida"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textSize="24sp"/>
+ <TextView
+     android:layout_marginTop="20dp"
+     android:id="@+id/tvusuario"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textSize="24sp"/>
+ <LinearLayout
+     android:layout_marginTop="20dp"
+     android:layout_width="395dp"
+     android:layout_marginLeft="5dp"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+  <ImageView
+
+      android:layout_marginLeft="15dp"
+      android:background="@color/colorFondo2"
+      android:layout_width="100dp"
+      android:layout_height="40dp"
+      android:adjustViewBounds="true"
+      android:scaleType="centerInside"
+      android:paddingBottom="@dimen/mtf_corner_radius"
+      android:src= "@drawable/foto_fachada"/>
+  <EditText
+      android:id="@+id/EMPRESA"
+      android:layout_marginLeft="30dp"
+      android:gravity="center"
+      android:layout_width="250dp"
+      android:layout_gravity="center"
+      android:layout_height="wrap_content"
+      android:hint="IMPRESORA SILVAFORM S.A. DE C.V."
+      android:background="@color/colorFondo2"
+      android:textColor="@color/colorAccent"
+      android:textColorHint="@color/colorWhite"
+      android:imeOptions="actionDone"
+      android:inputType="textPassword"
+      />
+ </LinearLayout>
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+   <com.github.florent37.materialtextfield.MaterialTextField
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_marginTop="20dp"
+       android:layout_marginBottom="20dp"
+       app:mtf_image="@drawable/ic_vpn_key_black_24dp"/>
+   <EditText
+       android:id="@+id/edPassword"
+       android:gravity="center"
+       android:layout_width="250dp"
+       android:layout_gravity="center"
+       android:layout_height="wrap_content"
+       android:hint="SELECCIONA EL MATERIAL"
+       android:textColor="@color/colorAccent"
+       android:textColorHint="@color/colorWhite"
+       android:imeOptions="actionDone"
+       android:inputType="textPassword"
+       />
+   <RadioGroup
+       android:layout_marginTop="20dp"
+       android:layout_marginBottom="20dp"
+       android:layout_gravity="left"
+       android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       >
+    <RadioButton
+        android:id="@+id/hombre"
+        android:textColor="@color/colorWhite"
+        android:buttonTint="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Papel" />
+    <RadioButton
+        android:id="@+id/mujer"
+        android:textColor="@color/colorWhite"
+        android:buttonTint="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aluminio" />
+    <RadioButton
+        android:id="@+id/intermedio"
+        android:textColor="@color/colorWhite"
+        android:buttonTint="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sticker" />
+   </RadioGroup>
+
+   <Button
+       android:id="@+id/btn"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="20dp"
+       android:layout_marginLeft="40dp"
+       android:layout_marginRight="40dp"
+       android:background="@drawable/botton_backgrownd_circle"
+       android:text="IMPRIMIR"/>
+
+  </LinearLayout>
+ </ScrollView>
+
+
+</LinearLayout>

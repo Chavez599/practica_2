@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:paddingBottom="@dimen/mtf_corner_radius"
+        android:src= "@drawable/foto_fachada"/>
+    <EditText
+        android:id="@+id/EMPRESA"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:hint="IMPRESORA SILVAFORM S.A. DE C.V."
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@color/colorWhite"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:mtf_image="@drawable/ic_vpn_key_black_24dp">
+
+            <EditText
+
+                android:id="@+id/edUser"
+                android:gravity="center"
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:hint="usario"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorWhite"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext"
+                />
+            </com.github.florent37.materialtextfield.MaterialTextField>
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:mtf_image="@drawable/ic_vpn_key_black_24dp">
+
+            <EditText
+                android:id="@+id/edPassword"
+                android:gravity="center"
+                android:layout_width="250dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:hint="contraseña"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorWhite"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                />
+            </com.github.florent37.materialtextfield.MaterialTextField>
+            <RadioGroup
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <RadioButton
+                    android:id="@+id/hombre"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hombre" />
+                <RadioButton
+                    android:id="@+id/mujer"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorWhite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="mujer" />
+            </RadioGroup>
+            <CheckBox
+                android:id="@+id/Terminos"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/colorWhite"
+                android:text="Acepto terminos y condiciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/botton_backgrownd_circle"
+                android:text="Iniciar"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

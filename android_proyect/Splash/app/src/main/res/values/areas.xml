@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="areas_de_trabajo">
+        <item>indica el area de trabajo</item>
+        <item>diseño</item>
+        <item>prensas</item>
+        <item>informacion variable</item>
+        <item>invitado</item>
+    </string-array>
+</resources>
