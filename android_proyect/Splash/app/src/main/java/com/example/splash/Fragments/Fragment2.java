@@ -5,12 +5,19 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.splash.Fragments.Adapter.Adapter;
+import com.example.splash.Fragments.Models.contact;
 import com.example.splash.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +28,10 @@ import com.example.splash.R;
  * create an instance of this fragment.
  */
 public class Fragment2 extends Fragment {
+
+    RecyclerView rcv;
+    Adapter adapter;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,6 +40,7 @@ public class Fragment2 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    View v;
 
     private OnFragmentInteractionListener mListener;
 
@@ -61,14 +73,22 @@ public class Fragment2 extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.fragment_fragment2, container, false);
+        //v=inflater.inflate(R.layout.fragment_fragment2, container, false);
+        v=inflater.inflate(R.layout.fragment_fragment2, container, false);
+        rcv = v.findViewById (R.id.rcv);
+        rcv.setHasFixedSize( true );
+        rcv.setLayoutManager( new LinearLayoutManager( getContext() ) );
+        adapter = new Adapter( getData() );
+        rcv.setAdapter( adapter );
+        return v;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -105,6 +125,37 @@ public class Fragment2 extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
+    public List<contact> getData () {
+        List<contact> usuarios = new ArrayList<>();
+        usuarios.add( new contact( "Rogelio", R.drawable.boy ) );
+        usuarios.add( new contact( "Azamir", R.drawable.boy ) );
+        usuarios.add( new contact( "Juan", R.drawable.boy ) );
+        usuarios.add( new contact( "Edwin", R.drawable.boy ) );
+        usuarios.add( new contact( "Arturo", R.drawable.boy ) );
+        usuarios.add( new contact( "Jaime", R.drawable.boy ) );
+        usuarios.add( new contact( "Daniel", R.drawable.boy ) );
+        usuarios.add( new contact( "Isaac", R.drawable.boy ) );
+        usuarios.add( new contact( "Teacher", R.drawable.boy ) );
+        usuarios.add( new contact( "Rogelio", R.drawable.boy ) );
+        usuarios.add( new contact( "Azamir", R.drawable.boy ) );
+        usuarios.add( new contact( "Juan", R.drawable.boy ) );
+        usuarios.add( new contact( "Edwin", R.drawable.boy ) );
+        usuarios.add( new contact( "Arturo", R.drawable.boy ) );
+        usuarios.add( new contact( "Jaime", R.drawable.boy ) );
+        usuarios.add( new contact( "Daniel", R.drawable.boy ) );
+        usuarios.add( new contact( "Isaac", R.drawable.boy ) );
+        usuarios.add( new contact( "Teacher", R.drawable.boy ) );
+        usuarios.add( new contact( "Rogelio", R.drawable.boy ) );
+        usuarios.add( new contact( "Azamir", R.drawable.boy ) );
+        usuarios.add( new contact( "Juan", R.drawable.boy ) );
+        usuarios.add( new contact( "Edwin", R.drawable.boy ) );
+        usuarios.add( new contact( "Arturo", R.drawable.boy ) );
+        usuarios.add( new contact( "Jaime", R.drawable.boy ) );
+        usuarios.add( new contact( "Daniel", R.drawable.boy ) );
+        usuarios.add( new contact( "Isaac", R.drawable.boy ) );
+        usuarios.add( new contact( "Teacher", R.drawable.boy ) );
+        return  usuarios;
+    }
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
