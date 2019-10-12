@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.recycler.Adapters.Adapter;
 import com.example.recycler.models.contact;
@@ -27,7 +28,13 @@ public class MainActivity extends AppCompatActivity {
         rcv = findViewById(R.id.rcv);
         rcv.setHasFixedSize( true );
         rcv.setLayoutManager( new LinearLayoutManager( this ) );
-        adapter = new Adapter(getData());
+        adapter = new Adapter(getData(), getApplicationContext());
+        adpater.setOnClicklistener( new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Toast.makeText(this,"hola", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
         rcv.setAdapter( adapter );
 
         //rcv.hasFixedSize(true);

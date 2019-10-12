@@ -1,5 +1,6 @@
 package com.example.recycler.Adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +18,12 @@ import java.util.List;
 public class Adapter extends RecyclerView.Adapter<Adapter.VH> implements View.OnClickListener{
 
     List<contact> contactos;
+    Context context;
+    private View.OnClickListener listener;
 
-    public Adapter(List<contact> contactos) {
+    public Adapter(List<contact> contactos, Context context) {
         this.contactos = contactos;
+        this.context = context;
     }
 
     @NonNull
@@ -27,9 +31,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.VH> implements View.On
     public VH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item,parent,false);
+        view.setOnClickListener( this );
         VH vh = new VH(view);
         return vh;
     }
+
+    public void setOnClicklistener (View.OnClickListener listener) {
+        this.listener = listener;
+    }
+
 
     @Override
     public void onBindViewHolder(@NonNull VH holder, int position) {
@@ -51,7 +61,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.VH> implements View.On
 
     @Override
     public void onClick(View view) {
-
+     listener.onClick( view );
     }
 
     public class VH extends RecyclerView.ViewHolder {
